@@ -31,7 +31,7 @@ public class CatalogPage extends BasePage {
     private ElementsCollection alphabet = $$(".alphabets__alphabet-item");
     private SelenideElement allBtn = $(".tags__tag");
     //селект "Сортировка" (сделан криво через input, работает только через клик)
-    private SelenideElement selectSort = $(By.xpath("//input[@readonly='readonly']"));
+    private SelenideElement selectSort = $(By.xpath("//input[@placeholder='Сортировка']"));
     private SelenideElement selectPop = $(By.xpath("//*[contains(text(),'По популярности')]"));
     private SelenideElement selectAlpha = $(By.xpath("//*[contains(text(),'По алфавиту')]"));
 
@@ -128,7 +128,7 @@ public class CatalogPage extends BasePage {
     }
 
     /**
-     * Выбор карточки товара по названию товара
+     * Выбор карточки товара по названию продукта
      *
      * @param title - название товара
      * @return - текущую страницу
@@ -154,7 +154,7 @@ public class CatalogPage extends BasePage {
     }
 
     /**
-     * Выбор иконок сравнить и сердечко на карточке товара
+     * Выбор иконок сравнить и сердечко на карточке продукта
      *
      * @param title  - название карточки
      * @param action - выбор иконки
